@@ -3,7 +3,7 @@
 #include <iostream>
 #include "./c_table.h"
 
-char_table::char_table(int l, int h){
+char_table::char_table(int h, int l){
 	arry = new char[(l*h)];
 	length=l;
 	high=h;
@@ -44,8 +44,8 @@ void char_table::show_table(){
 		std::cout << '\n';
 }	
 
-void char_table::put_char(char c, int l, int h){
-	int i = (h-1)*length + (length - (length - l));
+void char_table::put_char(char c, int h, int l){
+	int i = (h)*length + (length - (length - l));
 	arry[i] = c; 
 }
 
@@ -57,8 +57,8 @@ int char_table::get_high(){
 	return high;
 }
 
-char char_table::get_char(int l, int h){
-	int i = (h-1)*length + (length - (length - l));
+char char_table::get_char(int h, int l){
+	int i = (h)*length + (length - (length - l));
 	return arry[i];
 }
 #endif

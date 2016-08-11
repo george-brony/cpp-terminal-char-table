@@ -10,11 +10,11 @@ private:
 	char *arry = NULL;
 public:
 	void show_table();
-	int put_char(char c, int l, int h);
-	char get_char(int l, int h);
+	void put_char(char c, int h, int l);
+	char get_char(int h, int l);
 	int get_length();
 	int get_high();
-	char_table(int l, int h);
+	char_table(int h, int l);
 	~char_table();
 };
 
